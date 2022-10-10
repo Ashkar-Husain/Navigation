@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Animation by Ashkar Husain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul> 
+            <div class="search">
+                <span class="icon">
+                    <img class="searchBtn" src="img/search.png" alt="search">
+                    <img class="closeBtn" src="img/close.png" alt="search">
+                </span>
+            </div> 
+            <div class="searchBox">
+                <input type="text" placeholder="Search here...">
+            </div>          
+        </div>
+    </header>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+<!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+    <script>
+        let searchBtn = document.querySelector('.searchBtn');
+        let closeBtn = document.querySelector('.closeBtn');
+        let searchBox = document.querySelector('.searchBox');
+
+        searchBtn.onclick = function(){
+            searchBox.classList.add('active');
+            closeBtn.classList.add('active');            
+            searchBtn.classList.add('active');            
+        }
+        closeBtn.onclick = function(){
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');           
+
+        }      
+    </script>
+</body>
+</html>
